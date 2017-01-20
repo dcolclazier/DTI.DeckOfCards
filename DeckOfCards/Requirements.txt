@@ -1,0 +1,7 @@
+﻿Please write a representation of a deck of cards with the supplied Deck interface.
+You may create any other classes you deem useful in solving the problem.
+
+Unit tests are required.
+
+There are many acceptable solutions, so make sure and document your assumptions. When you’re done,
+please send a zip of all your files and any necessary instructions on how to run them.

@@ -1,0 +1,88 @@
+﻿To use this project, simply open the DeckOfCards.sln solution file 
+within visual studio. There are 3 projects included in this solution:
+
+- DeckOfCards: The class library in question. This contains the
+	basic functionality of a deck of cards - drawing, sorting, shuffling, cutting, peeking. T
+	he order of the cards is maintained exactly as it would if it were a physical deck. 
+	
+	Point of note - when you return a hand to the deck, the right-most card in your hand will 
+	be the first card placed back in the deck, as if you were simply grouping the cards up and 
+	dropping them on top of the deck.
+	
+	You'll find the release .dll under DeckOfCards\bin\release. 
+	You can use this .dll within any Visual Studio project by adding it as an external reference. 
+	If this folder has not been created yet, you download this project frim GitHub and must build 
+	it once for the .dll to be generated.
+	
+	The library is threadsafe, but has not been tested for all possible concurrent access issues.
+	Use this functionality at your own risk!
+	
+	Basic functionality List:
+		Cards have the following attributes:
+			Face - "Clubs", "Hearts", "Spades", "Diamonds"
+			Value - "Two" through "Ace"
+			CurrentlyInDeck - true if the card currently resides in the deck
+			FullName - A nicely formatted string for this card in the format $"{Value} of {Face}"- "Ace of Spaces"
+		
+		Can create decks of any size.
+				Usage: {var deck = new Deck();}, {var deck = new Deck(30);}, {var deck = new Deck(30,true);}
+				Note: If more than 52 cards are asked for, extras are created sequentially by default. 
+					  To avoid this, simply pass "true" as in the third example to cause extras to be 
+					  created randomly.
+				
+		Shuffle() - shuffles the deck.
+				Usage: {deck.Shuffle();}
+				
+		Cut(int) - cuts the deck, at a particular index or randomly.
+				Usage: {deck.Cut();},{deck.Cut(26);}
+				
+		Peek() - peeks at the top card.
+				Usage: {deck.Peek();}
+				
+		Peek(n) - peeks at the card with index n.
+				Usage: {deck.Peek(51);}
+				
+		DrawOne() - draws the top card.
+				Usage: {Card myCard = deck.DrawOne();}
+				
+		DrawOne(string) - draws the card with the matching name - 
+				Usage: {Card myAce = deck.DrawOne("Ace Of Spades");}
+				
+		DrawOne(int) - draws the card at a particular index.
+				Usage: {card myIndexedCard = deck.DrawOne(32);}
+				
+		Draw(int) - draws a certain number of cards, to a List<Card>. 
+				Usage: {var myHand = deck.Draw(5);}
+				
+		DrawSorted(int) - draws a certain number of cards and sorts the hand.  
+				Usage: {var mySortedHand = deck.DrawSorted(5);}
+				
+		Push(Card) - returns a card to the deck. 
+				Usage: {deck.Push(myCard);}
+				
+		Push(Card, List<Card>) - returns a card to a deck and removes it from a list (useful for managing hands). 
+				Usage: {deck.Push(myHand.First(), myHand);}
+				
+		Push(List<Card>) - returns a list of cards to the deck, emptying the list. 
+				Usage: {deck.Push(myHand);}
+				
+		Insert(Card, int) - inserts a card at a particular index. 
+				Usage: {deck.Insert(myCard, 25);}
+				
+		CurrentCount (property) - the number of cards in the deck. Equivalent to Count. 
+		
+		TotalCount (property) - the total number of cards (in the deck and currently drawn from the deck).
+		
+		DrawnCount (property) - the total number of cards drawn from (not currently in) the deck.
+		
+		
+
+- DeckOfCardsTests: Unit Testing class, contains unit tests for project.
+	These can be run within Visual Studio by selecting "Test" followed by
+	"Windows" followed by "Test Explorer" in the Visual Studio menu bar.
+	After the window is open, simply select "Run All" to run the tests.
+
+- DeckSample: A simple console application that shows useage examples 
+	for the DeckOfCards class library. To run, simply open program.cs and
+	run the application. In addition, binaries are included for convenience,
+	under DeckSample\bin\release.

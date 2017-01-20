@@ -1,0 +1,15 @@
+DeckSample/bin/Debug/DeckSample.vshost.exe.config
+DeckSample/bin/Debug/
+DeckSample/obj/
+DeckSample/bin/
+DeckOfCardsTests/obj/
+Colclazier_CardDeck.rar
+Colclazier_CardDeck_PreStack.zip
+Colclazier_CardDeck_better.zip
+Colclazier_CardDeck_betterStill.zip
+DeckOfCards/bin/
+DeckOfCards/obj/Debug/
+DeckOfCards/obj/
+*.suo
+*.user
+DeckOfCardsTests/bin/

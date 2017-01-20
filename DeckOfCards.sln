@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeckOfCards", "DeckOfCards\DeckOfCards.csproj", "{43430EA7-B35F-493B-84E7-5F04FFEB225D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeckOfCardsTests", "DeckOfCardsTests\DeckOfCardsTests.csproj", "{C986DFE7-349B-4CE4-866F-20666F0F6274}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeckSample", "DeckSample\DeckSample.csproj", "{3DD3F060-64FB-4B0D-849C-C4A70020E136}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43430EA7-B35F-493B-84E7-5F04FFEB225D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43430EA7-B35F-493B-84E7-5F04FFEB225D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43430EA7-B35F-493B-84E7-5F04FFEB225D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43430EA7-B35F-493B-84E7-5F04FFEB225D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C986DFE7-349B-4CE4-866F-20666F0F6274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C986DFE7-349B-4CE4-866F-20666F0F6274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C986DFE7-349B-4CE4-866F-20666F0F6274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C986DFE7-349B-4CE4-866F-20666F0F6274}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DD3F060-64FB-4B0D-849C-C4A70020E136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DD3F060-64FB-4B0D-849C-C4A70020E136}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DD3F060-64FB-4B0D-849C-C4A70020E136}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DD3F060-64FB-4B0D-849C-C4A70020E136}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
